@@ -36,7 +36,6 @@ singleRouter.delete('/', async (req, res) => {
 /* GET todo. */
 singleRouter.get('/', async (req, res) => {
   res.send(req.todo)
-  // res.sendStatus(405); // Implement this
 });
 
 /* PUT todo. */
