@@ -3,6 +3,7 @@ const redis = require('../redis');
 const router = express.Router();
 
 const configs = require('../util/config')
+console.log('CONFIG: ', configs)
 
 let visits = 0
 
