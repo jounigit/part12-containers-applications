@@ -1,8 +1,8 @@
 version: '3.8'
 
 services:
-  app:
-    image: todo-backend-2024
+  server:
+    image: todo-backend
     build: .
 
     ports:
