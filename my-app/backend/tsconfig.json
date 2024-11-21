@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "CommonJS",
+    // "moduleResolution": undler, // Option 'bundler' can only be used when 'module' is set to 'es2015' or later
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "preserveSymlinks": true,
+    "skipLibCheck": true,
+    "outDir": "./build",
+    "rootDir": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["vitest/globals"],
+  },
+  // "include": ["src/**/*.ts", "tests/**/*.test.ts"],
+  "exclude": [
+      "node_modules"
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  },
+}
