@@ -53,6 +53,7 @@ export const HeaderDb = styled.div`
     height: 1rem;
     width: 100vh;
     background-color: rgb(30, 100, 97);
+    z-index: 100;
 `
 
 export const AsideDb = styled.div`

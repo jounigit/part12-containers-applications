@@ -9,7 +9,7 @@ import { ImagesInDiv } from '../../../components/atoms/ImagesInDiv'
 import { ImagesLinkDiv } from '../../../components/atoms/ImagesLinkDiv'
 import { Modal } from '../../../components/modal/modal'
 import { ImageModal } from '../../../components/image-modal/image-modal'
-import { formatUrl } from '../../../components/atoms/utils'
+import { formatUrl } from '@/components/atoms/utils'
 
 interface PictureMediaProps extends ImageGridProps {
   imageList: Picture[]
