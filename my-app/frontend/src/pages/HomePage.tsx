@@ -1,8 +1,7 @@
 import type { FC } from 'react'
 import styled from 'styled-components'
-import { Info } from '../features/home/Info'
 import { HomeAlbums } from '../features/home/HomeAlbums'
-// import { Upload } from '../features/picture/components/admin/Upload'
+import { Info } from '../features/home/Info'
 
 const Wrapper = styled.div`
   display: grid;
@@ -11,13 +10,12 @@ const Wrapper = styled.div`
 `
 
 const HomePage: FC = () => {
-
-  return (
-    <Wrapper>
-      <Info />
-      <HomeAlbums />
-    </Wrapper>
-  )
+	return (
+		<Wrapper>
+			<Info />
+			<HomeAlbums />
+		</Wrapper>
+	)
 }
 
 export default HomePage

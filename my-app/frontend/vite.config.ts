@@ -12,7 +12,13 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			'@': resolve(root),
-			'components': resolve(root, 'components')
+			'components': resolve(root, 'components'),
+			'features': resolve(root, 'features'),
+			'hooks': resolve(root, 'hooks'),
+			'store': resolve(root, 'store'),
+			'services': resolve(root, 'services'),
+			'styles': resolve(root, 'styles'),
+			'assets': resolve(root, 'assets'),
 		},
 	},
 })

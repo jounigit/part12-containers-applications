@@ -13,16 +13,20 @@
     "preserveSymlinks": true,
     "skipLibCheck": true,
     "outDir": "./build",
-    "rootDir": ".",
+    "rootDir": "./src",
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"]
     },
     "types": ["vitest/globals"],
   },
-  // "include": ["src/**/*.ts", "tests/**/*.test.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": [
-      "node_modules"
+      "node_modules",
+      "build",
+      "tests/**/*.test.ts",
+      "tests/**/*.spec.ts",
+      "index.d.ts",
   ],
   "ts-node": {
     "transpileOnly": true,

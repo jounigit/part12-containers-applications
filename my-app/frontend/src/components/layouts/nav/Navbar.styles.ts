@@ -1,6 +1,6 @@
+import { TABLET } from '@/styles'
+import { colors } from '@/styles/theme'
 import styled from 'styled-components'
-import { TABLET } from '../../../styles/theme/breakpoints'
-import { colors } from '../../../styles/theme'
 
 export const NavbarContainer = styled.nav<{
 	$scrollpos: number

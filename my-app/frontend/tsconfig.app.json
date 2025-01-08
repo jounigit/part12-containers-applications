@@ -29,7 +29,8 @@
       "hooks/*": ["src/hooks/*"],
       "store/*": ["src/store/*"],
       "services/*": ["src/services/*"],
-      "styles/*": ["src/styles/*"]
+      "styles/*": ["src/styles/*"],
+      "assets/*": ["src/assets/*"]
       }
   },
   "include": [

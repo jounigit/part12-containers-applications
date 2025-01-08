@@ -1,11 +1,8 @@
+import { DESKTOP, LAPTOP, TABLET } from '@/styles'
+import { colors } from '@/styles/theme'
+import { BIGSCREEN, WIDE } from '@/styles/theme/breakpoints'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { DESKTOP, LAPTOP, TABLET } from '../../../styles'
-import {
-	BIGSCREEN,
-	WIDE,
-} from '../../../styles/theme/breakpoints'
-import { colors } from '../../../styles/theme'
 
 interface Props {
 	size?: number

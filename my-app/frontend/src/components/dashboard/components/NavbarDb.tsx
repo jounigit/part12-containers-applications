@@ -1,9 +1,8 @@
+import { colors } from '@/styles/theme'
 import type { FC } from 'react'
-
-import { NavbarLink } from './Dashboard.styles'
-import { BurgerDb } from './BurgerDb'
 import styled from 'styled-components'
-import { colors } from '../../../styles/theme'
+import { BurgerDb } from './BurgerDb'
+import { NavbarLink } from './Dashboard.styles'
 
 const Container = styled.div`   
     position: fixed;
@@ -24,18 +23,13 @@ const Container = styled.div`
 `
 
 const NavbarDb: FC = () => (
-  <Container>
-    <BurgerDb />
-    <NavbarLink
-      to="/"
-      style={{ marginLeft: '50%' }}
-    >
-      Etusivu/yleisösivu
-    </NavbarLink>
-    <div className="name">
-      HALLINTASIVU
-    </div>
-  </Container>
+	<Container>
+		<BurgerDb />
+		<NavbarLink to='/' style={{ marginLeft: '50%' }}>
+			Etusivu/yleisösivu
+		</NavbarLink>
+		<div className='name'>HALLINTASIVU</div>
+	</Container>
 )
 
 export default NavbarDb

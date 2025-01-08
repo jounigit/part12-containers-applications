@@ -1,9 +1,9 @@
+import { TABLET } from '@/styles/theme/breakpoints'
 import styled from 'styled-components'
-import { TABLET } from '../../../styles/theme/breakpoints'
 
 export interface ImageGridProps {
-  $gridwidth: number,
-  $imgheight: number,
+	$gridwidth: number
+	$imgheight: number
 }
 
 export const ImageGrid = styled.div<ImageGridProps>`

@@ -1,19 +1,26 @@
-import { PictureListItemAdmin } from './PictureListItemAdmin'
+import {
+	ImgContainerDb,
+	ImgGridDb
+} from '@/components/dashboard/components/Dashboard.styles'
 import { usePictures } from '../../usePicture'
-import { ImgContainerDb, ImgGridDb } from '../../../../components/dashboard/components/Dashboard.styles'
+import { PictureListItemAdmin } from './PictureListItemAdmin'
 
 export const PictureListAdmin = () => {
-  const { data } = usePictures()
+	const { data } = usePictures()
 
-  const showdata = data ?
-    data.map(p => <PictureListItemAdmin key={p.id} picture={p} />) :
-    <h4>no images yet.</h4>
+	const showdata = data ? (
+		data.map((p) => (
+			<PictureListItemAdmin key={p.id} picture={p} />
+		))
+	) : (
+		<h4>no images yet.</h4>
+	)
 
-  return (
-    <ImgContainerDb>
-      <ImgGridDb $width={200} $imgheight={200}>
-        {showdata}
-      </ImgGridDb>
-    </ImgContainerDb>
-  )
+	return (
+		<ImgContainerDb>
+			<ImgGridDb $width={200} $imgheight={200}>
+				{showdata}
+			</ImgGridDb>
+		</ImgContainerDb>
+	)
 }

@@ -1,22 +1,19 @@
-import { ListHomeContainer } from "../../styles/styles"
-import { useAlbums } from "../album/useAlbum"
-import { ListHomeItem } from "./ListHomeItem"
+import { ListHomeContainer } from '@/styles/styles'
+import { useAlbums } from '../album/useAlbum'
+import { ListHomeItem } from './ListHomeItem'
+import { isAlbumArray } from '@/types'
 
 export const HomeAlbums = () => {
-    const { data: Albums } = useAlbums()
+	const { data: Albums } = useAlbums()
 
-    if (Albums === undefined) {
-        return <div>No albums yet.</div>
-    }
+	if (Albums === undefined || !isAlbumArray(Albums)) {
+		return <div>No albums yet.</div>
+	}
 
-    const threeAlbums = Albums.slice(0,3)
+	const threeAlbums = Albums.slice(0, 3)
 
-    const showAlbums = threeAlbums.map((a) => 
-        <ListHomeItem key={a.id} album={a} />
-    )
-    return (
-        <ListHomeContainer>
-            {showAlbums}
-        </ListHomeContainer>
-        )
+	const showAlbums = threeAlbums.map((a, i) => (
+		<ListHomeItem key={a.id} album={a} order={i} />
+	))
+	return <ListHomeContainer>{showAlbums}</ListHomeContainer>
 }

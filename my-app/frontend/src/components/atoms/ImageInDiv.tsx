@@ -1,20 +1,19 @@
-import type { Picture } from '../../types'
-import { formatUrl } from './utils'
+import { ImageKitComponent } from '@/features/utils/ImageKitComponent'
+import type { Picture } from '@/types'
 
 interface Props {
-    data: Picture;
-    url: string;
-    height?: string;
-  }
+	data: Picture
+	height?: string
+}
 
-export function ImageInDiv({ data, url }: Props): JSX.Element {
-  return (
-    <>
-      {
-        <div>
-          <img src={formatUrl(url, data.image)} alt="" />
-        </div>
-      }
-    </>
-  )
+export function ImageInDiv({ data }: Props): JSX.Element {
+	return (
+		<>
+			{
+				<div>
+					<ImageKitComponent url={data.url} />
+				</div>
+			}
+		</>
+	)
 }

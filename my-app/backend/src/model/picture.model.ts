@@ -10,11 +10,13 @@ export async function getPictureOrThrowError(id: number) {
 }
 
 export interface INewPicture {
-    title: string;
-    year?: string;
-    content?: string;
-    image: string;
-    userID: number
+  title: string;
+  year?: string;
+  content?: string;
+  fileId: string;
+  url: string;
+  thumbnailUrl: string;
+  userID: number
 }
 
 export const createPicture = async (data: INewPicture): Promise<Picture> => {

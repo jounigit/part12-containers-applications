@@ -1,15 +1,15 @@
+import { Logout } from '@/features/login/components/Logout'
+import { colors } from '@/styles/theme'
 import type { FC } from 'react'
 import styled from 'styled-components'
 import { NavLinksDetailsDb } from './NavLinksDetailsDb'
-import { colors } from '../../../styles/theme'
-import { Logout } from '../../../features/login/components/Logout'
 // import { FaHome } from 'react-icons/fa'
 // import { NavLink } from 'react-router-dom'
 // import styled from 'styled-components'
 
 type Props = {
-  open: boolean,
-  toggle: () => void,
+	open: boolean
+	toggle: () => void
 }
 
 const Ul = styled.ul<{ open: boolean }>`
@@ -44,9 +44,8 @@ const Ul = styled.ul<{ open: boolean }>`
 `
 
 export const NavLinksDb: FC<Props> = ({ open, toggle }) => (
-  <Ul open={open}>
-    <NavLinksDetailsDb toggle={toggle} />
-    <Logout />
-
-  </Ul>
+	<Ul open={open}>
+		<NavLinksDetailsDb toggle={toggle} />
+		<Logout />
+	</Ul>
 )

@@ -1,11 +1,10 @@
+import type { Picture } from '@/types'
 import styled from 'styled-components'
-import type { Picture } from '../../types'
-import { formatUrl } from './utils'
+import { ImageKitComponent } from '@/features/utils/ImageKitComponent'
 
 interface Props {
-    data: Picture[];
-    url: string;
-    showInfo?: false | true | undefined;
+	data: Picture[]
+	showInfo?: false | true | undefined
 }
 
 const Txt = styled.p`
@@ -13,29 +12,28 @@ const Txt = styled.p`
   font-size: 0.95rem;
 `
 
-export function ImagesInDiv({ data, url, showInfo=true }: Props): JSX.Element {
+export function ImagesInDiv({
+	data,
+	showInfo = true
+}: Props): JSX.Element {
+	return (
+		<>
+			{data.map((item) => (
+				<div key={item.id}>
+					<ImageKitComponent url={item.url} />
+					{showInfo && picData(item)}
+				</div>
+			))}
+		</>
+	)
 
-  return (
-    <>
-      {
-        data.map((item) => (
-          <div key={item.id}>
-            <img src={formatUrl(url, item.image)} alt="" />
-            {showInfo &&
-              picData(item)
-            }
-          </div>
-        )
-        )
-      }
-    </>
-  )
-
-  function picData(item: Picture) {
-    return <>
-      {item.title && <h4>{item.title}</h4>}
-      {item.year && <Txt>{item.year}</Txt>}
-      {item.content && <Txt>{item.content}</Txt>}
-    </>
-  }
+	function picData(item: Picture) {
+		return (
+			<>
+				{item.title && <h4>{item.title}</h4>}
+				{item.year && <Txt>{item.year}</Txt>}
+				{item.content && <Txt>{item.content}</Txt>}
+			</>
+		)
+	}
 }

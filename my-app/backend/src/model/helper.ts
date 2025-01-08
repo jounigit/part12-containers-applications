@@ -31,8 +31,6 @@ export function deleteFileIfExists(filePath: string) {
   }
 }
 
-// export function deleteExtraFiles()
-
 export async function resizeImage(buf: Buffer, srcUrl: string, size: number, destUrl: string) {
   const options = await getOptionsByOrientation(srcUrl, size)
 
@@ -41,6 +39,17 @@ export async function resizeImage(buf: Buffer, srcUrl: string, size: number, des
       .resize(options)
       .toFile(destUrl)
 
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export async function onlyResizeImage(buf: Buffer, srcUrl: string, size: number) {
+  const options = await getOptionsByOrientation(srcUrl, size)
+  try {
+    return await sharp(buf)
+      .resize(options)
+      .toBuffer()
   } catch (error) {
     console.log(error)
   }

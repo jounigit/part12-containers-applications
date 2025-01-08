@@ -1,8 +1,8 @@
 import { test, expect } from 'vitest'
 import request from 'supertest'
-import app from 'src/app'
-import fs from 'fs'
-import path from 'path'
+import app from '../../src/app'
+import fs from 'node:fs'
+import path from 'node:path'
 
 const filePath = path.resolve(__dirname, '../fixtures/test.jpg')
 

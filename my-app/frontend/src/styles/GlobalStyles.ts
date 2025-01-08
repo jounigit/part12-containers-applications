@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
+import defaultBg from '../assets/default_bg.jpg'
+import { colors } from './theme'
 import {
 	DESKTOP,
 	LAPTOP,
 	MOBILE,
-	TABLET,
+	TABLET
 } from './theme/breakpoints'
-import { colors } from './theme'
-import defaultBg from '../assets/default_bg.jpg'
 
 interface Prop {
 	bgImage?: false | true | undefined
@@ -61,7 +61,7 @@ const GlobalStyles = createGlobalStyle<Prop>`
     /* don't show picture if dashboard */
     background-color: var(--gray-4);
     /* change color if dashboard */
-    background-image: url(${props => ( !props.dashboard && defaultBg)});
+    background-image: url(${(props) => !props.dashboard && defaultBg});
     background-size: cover;
     background-color: ${(props) => props.dashboard && 'white'};
   }

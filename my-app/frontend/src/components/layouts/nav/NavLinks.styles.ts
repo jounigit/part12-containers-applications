@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import { TABLET } from '@/styles'
+import { colors } from '@/styles/theme'
 import { NavLink } from 'react-router-dom'
-import { TABLET } from '../../../styles'
-import { colors } from '../../../styles/theme'
+import styled from 'styled-components'
 
 interface Nav {
 	open: boolean

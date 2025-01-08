@@ -4,12 +4,12 @@
  *    const { scrollpos, show } = useNavScroll();
  */
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export function useNavScroll() {
 	const [state, setState] = useState({
 		scrollpos: 0,
-		show: true,
+		show: true
 	})
 
 	const listener = (): void =>
@@ -17,7 +17,7 @@ export function useNavScroll() {
 			scrollpos: document.body.getBoundingClientRect().top,
 			show:
 				document.body.getBoundingClientRect().top >
-				state.scrollpos,
+				state.scrollpos
 		})
 
 	useEffect(() => {
@@ -29,6 +29,6 @@ export function useNavScroll() {
 
 	return {
 		scrollpos: state.scrollpos,
-		show: state.show,
+		show: state.show
 	}
 }
